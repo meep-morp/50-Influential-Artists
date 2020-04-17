@@ -90,6 +90,9 @@ header {
   display: flex;
   justify-content: center;
 }
+header nav {
+  font-size: 1.7rem;
+}
 .title-container {
   background-image: url(/assets/home.png);
   background-size: contain;
@@ -101,14 +104,55 @@ header {
   justify-content: center;
   align-items: center;
   width: 60%;
+  top: 0;
   margin: 0 auto;
   padding: 10%;
+}
+@media min-width: 950px {
+  .title-container {
+    background-size: cover;
+    background-attachment: scroll;
+  }
 }
 .title-container h1 {
   font-size: 4rem;
   text-align: center;
-}
-.title-container h1,
-.title-container h2 {
   color: white;
+}
+.title-container button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: black inset;
+  height: 40px;
+  width: 200px;
+}
+.artists-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  text-align: center;
+  padding: 10%;
+}
+.artists-container .artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+.artists-container a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+}
+.artists-container img {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+}
+.artists-container img:hover {
+  opacity: 80%;
+  transition: 0.7s ease;
 }

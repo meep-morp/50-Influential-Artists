@@ -4,25 +4,54 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .flex(column);
     width: 60%;
+    top: 0;
     margin: 0 auto;
     padding: 10%;
+
+    @media @tablet{
+        background-size: cover;
+        background-attachment: scroll;
+    }
 
     h1{
         font-size: 4rem;
         text-align: center;
-    }
-
-    h2{
-        ;
-    }
-
-    h1, h2{
         color: @headerColor;
     }
 
+    button{
+        .btn(@headerColor, @fontColor, 5px);
+    }
+
+}
+
+.artists-container{
+    .flex(row, space-around, baseline);
+    text-align: center;
+    padding: 10%;
+
+    .artist{
+        .flex(column, space-between);
+        padding: 0 10%;
+
+    }
+
+    a{
+        text-decoration: none; 
+        color: @fontColor;
+        font-size: 1.7rem;
+    }
+
+    img{
+        width: 350px;
+        height: 300px;
+        border-radius: 10px;
+
+        &:hover{
+            opacity: 80%;
+            transition: 0.7s ease;
+        }
+    }
 }
