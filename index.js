@@ -253,7 +253,7 @@ removeArtist(artists, 0);
 function get20s(arr){
   const bornIn20s = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].years > 1900) {
+    if (arr[i].years === "1800 - 1900") {
       console.log(i);
       bornIn20s.push(arr[i]);
     }

@@ -4,6 +4,16 @@ header {
 
     nav{
         font-size: 1.7rem;
+        padding: 3%;
+
+        @media @mobile {
+            flex-direction: column;
+        }
+
+        &:hover{
+            border-bottom: gray dashed 2px;
+            transition: 0.7s ease;
+        }
     }
 
 }

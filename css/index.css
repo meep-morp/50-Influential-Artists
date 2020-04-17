@@ -92,10 +92,20 @@ header {
 }
 header nav {
   font-size: 1.7rem;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+header nav:hover {
+  border-bottom: gray dashed 2px;
+  transition: 0.7s ease;
 }
 .title-container {
   background-image: url(/assets/home.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -106,18 +116,18 @@ header nav {
   width: 60%;
   top: 0;
   margin: 0 auto;
+  margin-bottom: 50px;
   padding: 10%;
-}
-@media min-width: 950px {
-  .title-container {
-    background-size: cover;
-    background-attachment: scroll;
-  }
 }
 .title-container h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
+}
+@media (max-width: 500px) {
+  .title-container h1 {
+    font-size: 3rem;
+  }
 }
 .title-container button {
   background-color: white;
@@ -127,13 +137,38 @@ header nav {
   height: 40px;
   width: 200px;
 }
+@media (max-width: 500px) {
+  .title-container button {
+    width: 150px;
+  }
+}
+.title-container button:hover {
+  background: lightgray;
+  transition: 0.6s ease;
+}
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 75%;
+  background-color: gray;
+  height: 1.5px;
+}
 .artists-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
   text-align: center;
-  padding: 10%;
+  padding: 3% 10%;
+}
+@media (max-width: 858px) {
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .artists-container .artist {
   display: flex;
@@ -142,10 +177,23 @@ header nav {
   align-items: center;
   padding: 0 10%;
 }
+.artists-container .bio {
+  padding: 2%;
+}
 .artists-container a {
   text-decoration: none;
   color: black;
   font-size: 1.7rem;
+}
+@media (max-width: 858px) {
+  .artists-container a {
+    padding: 3%;
+  }
+}
+@media (max-width: 500px) {
+  .artists-container a {
+    font-size: 1.5rem;
+  }
 }
 .artists-container img {
   width: 350px;
