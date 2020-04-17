@@ -1,0 +1,93 @@
+.title-container{
+    background-image: url(/assets/home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    .flex(column);
+    width: 60%;
+    top: 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 10%;
+
+
+    h1{
+        font-size: 4rem;
+        text-align: center;
+        color: @headerColor;
+
+        @media @mobile {
+            font-size: 3rem;
+        }
+    }
+
+    button{
+        .btn(@headerColor, @fontColor, 5px);
+
+        @media @mobile {
+            width: 150px;
+        }
+
+        &:hover{
+            background: lightgray;
+            transition: 0.6s ease;
+        }
+    }
+
+}
+
+hr{
+    border: 0;
+    clear:both;
+    display: block;
+    width: 75%;
+    background-color: gray;
+    height: 1.5px;
+}
+
+.artists-container{
+    .flex(row, space-around, baseline);
+    text-align: center;
+    padding: 3% 10%;
+    
+    @media @tabletBreakpointOne {
+        .flex(column, center, center)
+    }
+
+    .artist{
+        .flex(column, space-between);
+        padding: 0 10%;
+
+    }
+
+    .bio {
+        padding: 2%;
+    }
+
+    a{
+        text-decoration: none; 
+        color: @fontColor;
+        font-size: 1.7rem;
+
+        @media @tabletBreakpointOne{
+            padding: 3%;
+        }
+
+        @media @mobile {
+            font-size: 1.5rem;
+        }
+    }
+
+    img{
+        width: 350px;
+        height: 300px;
+        border-radius: 10px;
+
+
+        &:hover{
+            opacity: 80%;
+            transition: 0.7s ease;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+//Mixins
+.flex(@direct:row, @justify: center, @align: center){
+    display: flex;
+    flex-direction: @direct;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.btn(@bgColor, @textColor, @radius){
+    background-color: @bgColor;
+    color: @textColor;
+    border-radius: @radius;
+    box-shadow: black inset;
+    height: 40px;
+    width: 200px
+}
+
+//Media Queries 
+@mobile: ~"(max-width: 500px)";
+@tablet: ~"(max-width: 950px)";
+@tabletBreakpointOne: ~"(max-width: 858px)";

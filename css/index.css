@@ -1,4 +1,209 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  font-family: 'Raleway';
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  font-size: 1.7rem;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+header nav:hover {
+  border-bottom: gray dashed 2px;
+  transition: 0.7s ease;
+}
+.title-container {
+  background-image: url(/assets/home.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  top: 0;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 10%;
+}
+.title-container h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 500px) {
+  .title-container h1 {
+    font-size: 3rem;
+  }
+}
+.title-container button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: black inset;
+  height: 40px;
+  width: 200px;
+}
+@media (max-width: 500px) {
+  .title-container button {
+    width: 150px;
+  }
+}
+.title-container button:hover {
+  background: lightgray;
+  transition: 0.6s ease;
+}
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 75%;
+  background-color: gray;
+  height: 1.5px;
+}
+.artists-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  text-align: center;
+  padding: 3% 10%;
+}
+@media (max-width: 858px) {
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.artists-container .artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+.artists-container .bio {
+  padding: 2%;
+}
+.artists-container a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+}
+@media (max-width: 858px) {
+  .artists-container a {
+    padding: 3%;
+  }
+}
+@media (max-width: 500px) {
+  .artists-container a {
+    font-size: 1.5rem;
+  }
+}
+.artists-container img {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+}
+.artists-container img:hover {
+  opacity: 80%;
+  transition: 0.7s ease;
+}
